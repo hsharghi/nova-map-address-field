@@ -1,6 +1,6 @@
 <?php
 
-namespace Softworks\MapAddress;
+namespace Hsharghi\MapAddress;
 
 use Laravel\Nova\Fields\Field;
 use Laravel\Nova\Http\Requests\NovaRequest;
@@ -13,7 +13,6 @@ class MapAddress extends Field
      * @var string
      */
     public $component = 'map-address';
-
     public $latField = 'lat';
     public $lngField = 'lng';
 

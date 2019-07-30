@@ -1,5 +1,5 @@
 {
-    "name": "softworks/map-address",
+    "name": "hsharghi/map-address",
     "description": "A Laravel Nova field.",
     "keywords": [
         "laravel",
@@ -11,13 +11,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Softworks\\MapAddress\\": "src/"
+            "Hsharghi\\MapAddress\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Softworks\\MapAddress\\FieldServiceProvider"
+                "Hsharghi\\MapAddress\\FieldServiceProvider"
             ]
         }
     },

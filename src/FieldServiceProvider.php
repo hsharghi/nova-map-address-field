@@ -1,10 +1,10 @@
 <?php
 
-namespace Softworks\MapAddress;
+namespace Hsharghi\MapAddress;
 
+use Illuminate\Support\Facades\Config;
 use Laravel\Nova\Nova;
 use Laravel\Nova\Events\ServingNova;
-use Illuminate\Support\Facades\Config;
 use Illuminate\Support\ServiceProvider;
 
 class FieldServiceProvider extends ServiceProvider
@@ -21,7 +21,6 @@ class FieldServiceProvider extends ServiceProvider
                 __DIR__.'/../config/map-address.php' => base_path('config/map-address.php'),
             ], 'config');
         }
-
         Nova::serving(function (ServingNova $event) {
             Nova::script('map-address-gmaps', $this->googleMapsSource());
             Nova::script('map-address', __DIR__.'/../dist/js/field.js');
@@ -39,6 +38,7 @@ class FieldServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(__DIR__.'/../config/map-address.php', 'map-address');
     }
 
+
     private function googleMapsSource()
     {
         return vsprintf(
@@ -49,5 +49,4 @@ class FieldServiceProvider extends ServiceProvider
             ]
         );
     }
-
 }
