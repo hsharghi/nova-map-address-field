@@ -11,6 +11,7 @@
                     :placeholder="field.name"
                     v-model="value"
                     ref="aca"
+                    @keypress.enter.prevent
             />
         </template>
     </default-field>
